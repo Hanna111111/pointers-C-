@@ -16,6 +16,20 @@ int main()
     cout << "px adress: " << px << endl;
     cout << "px value: " << *px << endl;
     cout << "px2 adress: " << *px2 << endl;
+    
+    //арифметика указателей
+    const int size = 5;
+    int arr[size] = {11, 24, 67, 22, 89};
+    for(int i = 0; i < size; i++){
+        cout << arr[i] << " ";
+    }
+    
+    cout << endl <<"===============================" << endl;
+    
+    int *pArr = arr;
+    for(int i = 0; i < size; i++){
+        cout << pArr[i] << " ";
+    }
 
     return 0;
 }
