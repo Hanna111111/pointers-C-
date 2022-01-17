@@ -1,25 +1,21 @@
+
 #include <iostream>
 using namespace std;
 
 int main()
 {
     int a = 5;
-    int *pa = &a;
+    cout << a << endl;
+    int *px = &a;//адресс а впихиваем в px; звездочка - переменная типа указатель, & - оператор взятия адреса.
+    int *px2 = &a;
     
-    int &aref = a;
+    *px2 = 2;//с помощью указателя поменяли значение
+    cout << a << endl;
     
-    cout << "*pa\t" << pa << endl;
-    cout << "*pa\t" << *pa << endl;
-    cout << "&aref\t" << a << endl;
     
-    pa++;
-    *pa = a++;
-    aref = 55;
-    
-    cout << "&aref\t" << aref << endl;
-    cout << "*pa\t" << pa << endl;
-    cout << "*pa\t" << *pa << endl;
-    cout << "&aref\t" << a << endl;
+    cout << "px adress: " << px << endl;
+    cout << "px value: " << *px << endl;
+    cout << "px2 adress: " << *px2 << endl;
 
     return 0;
 }
